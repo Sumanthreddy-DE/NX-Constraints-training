@@ -1,0 +1,136 @@
+================================================================================
+JOINT TYPE PREDICTOR - ML PROJECT FILES
+================================================================================
+
+📊 TRAINING & PREDICTION SCRIPTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. train_joint_predictor.py
+   - Main training script with iterative retraining
+   - Implements convergence checking
+   - Generates model and visualizations
+   - Usage: python train_joint_predictor.py
+
+2. predict_joint.py
+   - Inference script for making predictions
+   - Loads trained model and makes predictions
+   - Provides confidence scores
+   - Usage: python predict_joint.py
+
+================================================================================
+
+🤖 TRAINED MODEL & ARTIFACTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. joint_predictor_model.keras
+   - Trained TensorFlow neural network model
+   - 4 layers: 256→128→64→9 neurons
+   - Includes weights, architecture, optimizer state
+
+4. preprocessing_objects.pkl
+   - StandardScaler for feature normalization
+   - LabelEncoder for target encoding
+   - Feature column names
+
+================================================================================
+
+📈 VISUALIZATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. confusion_matrix.png
+   - Heatmap showing prediction accuracy
+   - Rows: Actual joint types
+   - Columns: Predicted joint types
+
+6. training_history.png
+   - Left plot: Loss over iterations
+   - Right plot: Accuracy over iterations
+   - Shows convergence behavior
+
+================================================================================
+
+📊 DATA FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. Constraint_dataset.xlsx
+   - Original dataset (154 samples, 44 columns)
+   - 41 features + Part1, Part2, Joint
+
+8. predictions.csv
+   - Prediction results on entire dataset
+   - Includes: Part1, Part2, Actual, Predicted, Confidence
+
+================================================================================
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+9. ML_README.md
+   - Comprehensive technical documentation
+   - Model architecture details
+   - API reference
+   - Troubleshooting guide
+
+10. USAGE_GUIDE.md
+    - Quick start guide
+    - Step-by-step examples
+    - Customization options
+    - Code snippets
+
+11. PROJECT_SUMMARY.md
+    - High-level project overview
+    - Results and metrics
+    - Key features
+    - Next steps
+
+12. requirements.txt
+    - Python package dependencies
+    - Version specifications
+
+================================================================================
+
+🎯 QUICK START
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Step 1: Install dependencies
+$ pip install -r requirements.txt
+
+Step 2: Train model
+$ python train_joint_predictor.py
+
+Step 3: Make predictions
+$ python predict_joint.py
+
+Step 4: Check results
+- View: confusion_matrix.png
+- View: training_history.png
+- Open: predictions.csv
+
+================================================================================
+
+📋 TRAINING RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Convergence reached after 5 iterations
+✓ Final test accuracy: 38.24%
+✓ Training samples: 120
+✓ Test samples: 34
+✓ Convergence tolerance: 0.01
+
+================================================================================
+
+🔧 KEY FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Iterative retraining with convergence detection
+✅ 120/34 train-test split (as requested)
+✅ Deep neural network with regularization
+✅ Automatic feature preprocessing
+✅ Comprehensive evaluation metrics
+✅ Visualization generation
+✅ Production-ready inference API
+✅ Detailed logging and progress tracking
+
+================================================================================
+
+📞 SUPPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+For detailed information:
+- Technical details → ML_README.md
+- Quick examples → USAGE_GUIDE.md
+- Project overview → PROJECT_SUMMARY.md
+
+================================================================================
